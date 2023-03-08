@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Моя страница</title>
+  </head>
+  <body>
+    <h1>Информация о системе</h1>
+    <div id="system-info"></div>
+    <script>
+      function ready() {
+        /*alert("DOM готов");*/
+        
+        fetch(
+          "http://176.9.28.53:7701/api/SystemManagment/GetSystemInformation",
+          {
+            method: "GET",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+          }
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            // Извлечение необходимых данных
+            const systemInfo = {
+              Name: data["SYS-CSName"],
+              TotalSessions: data["TS-TotalSessions"],
+              DisconnectedSessions: data["TS-DisconnectedSessions"],
+            };
+
+            // Создание HTML-блока
+            const htmlBlock = document.createElement("div");
+
+            // Добавление информации в HTML-блок
+            for (const [key, value] of Object.entries(systemInfo)) {
+              const itemElement = document.createElement("div");
+              itemElement.textContent = `${key}: ${value}`;
+              htmlBlock.appendChild(itemElement);
+            }
+
+            // Добавление HTML-блока на страницу
+            const systemInfoBlock = document.getElementById("system-info");
+            systemInfoBlock.appendChild(htmlBlock);
+          })
+          .catch((error) => console.error(error));
+      }
+      document.addEventListener("DOMContentLoaded", ready);
+    </script>
+  </body>
+</html>

@@ -1,30 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/styls.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/styls.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-       <img class="logo" src="№" alt="Logo">
+      <img class="logo" src="№" alt="Logo" />
     </header>
     <div class="generals">
-        <H1>REMOTE CONTROL SERVER</H1>
+      <div>
+        <h1>REMOTE CONTROL SERVER</h1>
         <h2>SERVERS</h2>
-        <div class="servers">
-            <div class="server-item">
-                <h3>Wan server</h3>
-            </div>
-            <div class="server-item">
-                <h3>Two server</h3>
-            </div>
-            <div class="server-item">
-                <h3>Three server</h3>
-            </div>
+      </div>
+      <div class="servers">
+        <div class="server-item">
+          <div class="system-info" id="system-info"></div>
+          <button onclick="location.reload()">Обновить страницу</button>
+          <script>
+            function ready() {
+              fetch(
+                "http://176.9.28.53:7701/api/SystemManagment/GetSystemInformation",
+                {
+                  method: "GET",
+                  headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                  },
+                }
+              )
+                .then((response) => response.json())
+                .then((data) => {
+                  // Извлечение необходимых данных
+                  const systemInfo = {
+                    Name: data["SYS-CSName"],
+                    TotalSessions: data["TS-TotalSessions"],
+                    DisconnectedSessions: data["TS-DisconnectedSessions"],
+                  };
+
+                  // Создание HTML-блока
+                  const htmlBlock = document.createElement("div");
+
+                  // Добавление информации в HTML-блок
+                  for (const [key, value] of Object.entries(systemInfo)) {
+                    const itemElement = document.createElement("div");
+                    itemElement.textContent = `${key}: ${value}`;
+                    itemElement.classList.add("element-blok")
+                    
+                    htmlBlock.appendChild(itemElement);
+                  }
+
+                  // Добавление HTML-блока на страницу
+                  const systemInfoBlock =
+                    document.getElementById("system-info");
+                  systemInfoBlock.appendChild(htmlBlock);
+                })
+                .catch((error) => console.error(error));
+            }
+            document.addEventListener("DOMContentLoaded", ready);
+          </script>
         </div>
+        <!-- <div class="server-item">
+          <h3>Two server</h3>
+        </div>
+        <div class="server-item">
+          <h3>Three server</h3>
+        </div> -->
+      </div>
     </div>
-</body>
+  </body>
 </html>
