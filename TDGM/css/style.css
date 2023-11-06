@@ -1,0 +1,30 @@
+body {
+    background: url(/img/bg.jpg)no-repeat center top;
+}
+header {  
+    box-sizing: border-box;
+    width: 800px 
+    height: 800px;
+    margin: 20px;
+    position::content;
+ }
+ main {
+    box-sizing: border-box;
+    width: 800px 
+    height: 800px;
+    margin: 20px;
+    position: relative;
+ }
+ p,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+    margin: 0;    
+ } 
+ ul {
+    padding-left: 0;
+    margin: 0;
+ } 
