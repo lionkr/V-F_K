@@ -1,19 +1,54 @@
 body {
-    background: url(/img/bg.jpg)no-repeat center top;
+   display: block;
+    background-color:rgb(241, 243, 242);
+    font-family: Verdana,sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 8px;
 }
 header {  
     box-sizing: border-box;
-    width: 800px 
-    height: 800px;
-    margin: 20px;
-    position::content;
+    margin: 40px; 
+    display: flex;
+ }
+ nav {
+   display: block;
+   width: auto;
+   margin: 0 auto 30px;
  }
  main {
-    box-sizing: border-box;
-    width: 800px 
-    height: 800px;
-    margin: 20px;
-    position: relative;
+   box-sizing: border-box;
+   margin: 40px;
+   position: relative;
+ }
+
+ .ul_nav {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: #333;
+ }
+ .li_nav {
+   float: left;
+ }
+ .li_nav a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+ }
+ li a:hover {
+   background-color: #a10a0a;
+ }
+ h1 {
+   text-align: center;
+ }
+ .text {
+   display: block;
+   padding-left: 500px; 
+   padding-right: 500px;
  }
  p,
  h1,
@@ -28,3 +63,26 @@ header {
     padding-left: 0;
     margin: 0;
  } 
+address {
+   
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+}
+.cart {
+   padding-left: 1200px;
+}
+.contacts {
+   box-sizing: border-box;
+   margin: 40px; 
+   
+}
+.contactsfull {
+   margin: 40px; 
+   display: flex;
+}
+footer {
+box-sizing: border-box;
+padding-left:900px;
+}
