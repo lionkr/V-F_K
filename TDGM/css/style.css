@@ -8,13 +8,19 @@ body {
 }
 header {  
     box-sizing: border-box;
-    margin: 40px; 
+    margin: -8px; 
+    padding: 0px;
     display: flex;
- }
+    background-color: rgb(11, 160, 247);
+    }
  nav {
    display: block;
    width: auto;
-   margin: 0 auto 30px;
+   margin: 0 auto 0px;
+ }
+ .logo {
+   padding-top: 15px;
+   padding-left: 10px;
  }
  main {
    box-sizing: border-box;
@@ -24,21 +30,42 @@ header {
 
  .ul_nav {
    list-style-type: none;
-   margin: 0;
+   margin: 15px;
    padding: 0;
    overflow: hidden;
    background-color: #333;
+   border-radius:  3000%;
  }
  .li_nav {
+   padding-top: 0px;
    float: left;
+   
  }
  .li_nav a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 200px;
   text-decoration: none;
  }
+ .button {
+   margin: 20px;
+   background-color: #050007;
+   color: rgb(250, 213, 2);
+   font-family: Verdana,sans-serif;
+   border-radius: 12px;
+   opacity: 0.6;
+   transition: 0.9s;
+ }
+ .button:hover {
+   opacity: 1
+ }
+ .phone {
+   margin-top: 30px;
+   color: rgb(14, 1, 1);
+
+ }
+ 
  li a:hover {
    background-color: #a10a0a;
  }
@@ -83,6 +110,7 @@ address {
    display: flex;
 }
 footer {
+background-color: #686868;
 box-sizing: border-box;
 padding-left:900px;
 }
