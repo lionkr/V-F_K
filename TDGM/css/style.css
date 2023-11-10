@@ -1,53 +1,96 @@
 body {
     background-image: url(/img/fon.jpg);
-    background-size: 100%;
-    font-family: Verdana,sans-serif;
+    font-family: Gill Sans, sans-serif;
     font-size: 15px;
-    line-height: 1.5;
+    line-height: 1;
     margin: 8px;
+    width: 2000px;
+  
+  
+  
 }
 header {  
-    box-sizing: border-box;
-    margin: -8px; 
-    padding: 0px;
-    display: flex;
-    background-color: rgb(48, 50, 51);
-    }
- nav {
-   display: block;
-   width: auto;
-   margin: 0 auto 0px;
- }
+  display: flex;
+  background-color: rgb(48, 50, 51);
+   }
+  
  .logo {
    padding-top: 15px;
    padding-left: 10px;
  }
  main {
-   box-sizing: border-box;
-   margin: 40px;
-   position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 1440px;
+  height: 2000px;
+  background-color: rgb(252, 253, 253);
+  margin: 0px 0px 10px 250px;
+  box-shadow: 10px 5px 5px red;
  }
-
- .ul_nav {
-   list-style-type: none;
-   margin: 15px;
-   padding: 0;
-   overflow: hidden;
-   background-color: #333;
-   border-radius:  3000%;
- }
- .li_nav {
-   padding-top: 0px;
-   float: left;
-   
- }
- .li_nav a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 200px;
-  text-decoration: none;
- }
+.wan_text {
+height: 600px;
+width: 1400px;
+}
+.services {
+height: 600px;
+width: 1400px;
+margin-bottom: 50px;
+}
+.choice {
+height: 600px;
+width: 1400px;
+margin-bottom: 50px;
+}
+.text {
+  height: 400px;
+  width: 600px;
+  border: 3px;
+  padding-left: 50px;
+  padding-top: 75px;
+  float:left;
+}
+.text2 {
+  height: 600px;
+  width: 600px;
+  border: 3px;
+  padding-top: 15px;
+  float:right;
+  margin-right: 100px;
+}
+.text3 {
+  height: 435px;
+  width: 600px;
+  border: 3px;
+  padding-top: 25px;
+  float:left;
+  margin-left: 100px;
+}
+.image {
+  float:right;
+  height: 360px;
+  width: 640px;
+  padding-left: 0;
+  padding-top: 0;
+}
+.image2 {
+  float:left;
+  height: 360px;
+  width: 640px;
+  padding-right: 0;
+  padding-top: 0;
+  margin-left: 40px;
+}
+.image3 {
+  float:right;
+  height: 360px;
+  width: 640px;
+  margin-left: 40px;
+  margin-bottom: 100px;
+}
+.im {
+  box-shadow: 15px 10px 5px rgb(14, 13, 13);
+}
+ 
  .button {
    margin: 20px;
    background-color: #050007;
@@ -72,11 +115,6 @@ header {
  h1 {
    text-align: center;
  }
- .text {
-   display: block;
-   padding-left: 500px; 
-   padding-right: 500px;
- }
  p,
  h1,
  h2,
@@ -84,33 +122,41 @@ header {
  h4,
  h5,
  h6 {
-    margin: 0;    
+    margin: 0;  
+    text-indent: 2em;  
+    line-height: 40px
  } 
+ p {
+  font-size: 20px;
+ }
  ul {
     padding-left: 0;
     margin: 0;
  } 
-address {
-   
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
-   overflow: hidden;
-}
+
 .cart {
-   padding-left: 1200px;
+  float:left;
+  height: 400px;
+  width: 400px;
+  padding-left: 800px;
+  padding-top: 50px;
 }
 .contacts {
-   box-sizing: border-box;
-   margin: 40px; 
-   
+float:left; 
+height: 400px;
+width: 600px;
+padding-top: 50px;
+padding-left: 50px;
 }
 .contactsfull {
-   margin: 40px; 
-   display: flex;
+height: 600px;
+width: 2000px;
+margin-bottom: 50px; 
 }
 footer {
-background-color: #686868;
-box-sizing: border-box;
-padding-left:900px;
+  display: flex;
+  flex-direction: column;
+  background-color: #686868;
+  width: 2000px;
+
 }
