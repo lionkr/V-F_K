@@ -1,0 +1,42 @@
+.hero {
+   max-width: var(--layout-width);
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.hero__left {
+   display: flex;
+   flex-direction: column;
+   gap: 32px;
+   width: Hug (544px);
+   height: Hug (194px);
+   top: 233px;
+   left: 146px;
+}
+
+.hero__h1 {
+   margin: 0;
+   font-size: 54px;
+   font-weight: 700;
+   line-height: 100%;
+   color: var(--color-text);
+   width: 544px;
+   height: 108px;
+}
+
+.hero__h1_gradient {
+   background:var(--gradient);
+   --webkit-background-clip:text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.hero__cta {
+   display: flex;
+   gap: 32px;
+   padding: 24px 0 0 0;
+}
+
