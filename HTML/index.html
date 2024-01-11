@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Знакомство с React JS</title>
+    <title>Школа разработки</title>
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/header.css">
@@ -25,11 +25,11 @@
                 <li class="menu__item"><a href="#">База знаний</a></li>
             </ul>
         </nav>
-        <a class="header__login">
+        <a class="header__login" href="#" aria-label="Вход в личный кабинет">
             <img src="./images/user.svg" alt="иконка пользователя">
             <div>Вход</div>
         </a>
-        <button class="header__mobile-menu-button">
+        <button class="header__mobile-menu-button" aria-expanded="false" aria-haspopup="true">
             <img src="/HTML/images/menu.svg" alt="Мобильное меню">
         </button>
     </div>
@@ -37,13 +37,13 @@
 <section class="section section_light">
     <div class="hero">
         <div class="hero_left">
-            <h1 class="hero__h1">Доступные курсы по <span class="hero__h1_gradient">Разработке и DevOps</span> </h1>
+            <h1 class="hero__h1">Доступные курсы по <br> <span class="hero__h1_gradient">Разработке и DevOps</span> </h1>
             <div class="hero__cta">
                 <button class="button button_primary">Выбрать курс</button>
                 <button class="button button_ghost">О школе</button>
             </div>
         </div>
-        <img class="hero_left" src="./images/video.png" alt="Видео с автором">
+        <img class="hero_right" src="./images/video.png" alt="Видео с автором">
     </div>
 </section>
 
