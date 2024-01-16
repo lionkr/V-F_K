@@ -5,6 +5,12 @@
     background-color: var(--color-bg-medium);
 }
 
+.section__wrapper {
+    max-width: var(--layout-width);
+    margin: 0 auto;
+    padding: 100px 24px;
+}
+
 /*Buttom*/
 .button {
     padding: 16px 32px;
@@ -34,10 +40,70 @@ cursor: pointer;
 .button_ghost:hover {
     background: var(--color-bg-medium);
 }
+/* social*/
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.social-icons-icon {
+    border: 1px solid var(--color-stroke);
+    border-radius: var(--border-8);
+    text-decoration: none;
+    padding: 11px;
+    width: 48px;
+    height: 48px;
+}
+
+.social-icons-icon:hover {
+    background-color: var(--color-bg-medium);
+}
 
 @media (max-width: 640px) {
     .button {
         padding: 12px 32px;
     }
+
+}
+
+/*headling*/
+.headling {
+    margin-bottom: 32px;
+}
+
+.headling__top {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 120%;
+    color: var(--color-secondary);
+    margin-bottom: 8px;
+}
+
+.headling_buttom {
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 120%;
+    color: var(--color-text);
+    margin: 0 0 32px 0;
+}
+
+/*Paragraph*/
+.paragraph {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--color-text);
+    max-width: 787px;
+}
+
+.paragraph_32 {
+    margin-bottom: 32px;
+}
+
+/*Card*/
+.card {
+    background: var(--color-bg-medium);
+    border-radius: var(--border-10);
+    border: 1px;
 
 }
