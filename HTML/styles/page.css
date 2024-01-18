@@ -41,6 +41,11 @@
    padding: 24px 0 0 0;
 }
 
+.button-more {
+  text-align: center;
+
+}
+
 @media (max-width: 1200px) {
     .hero {
         flex-direction: column;
